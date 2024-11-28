@@ -33,6 +33,7 @@ export default antfu({
   rules: {
     ...nextPlugin.configs.recommended.rules,
     ...nextPlugin.configs['core-web-vitals'].rules,
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
 }, {
   plugins: {

@@ -27,6 +27,16 @@ export default withSentryConfig(
       experimental: {
         serverComponentsExternalPackages: ['@electric-sql/pglite'],
       },
+      // Add proxy rewrites here
+      async rewrites() {
+        return [
+          {
+            source: '/api/graphql', // Match requests starting with /api
+            destination:
+              'https://vineoback-gh-qa.caprover2.innogenio.com/graphql', // Forward to backend
+          },
+        ];
+      },
     }),
   ),
   {

@@ -40,10 +40,17 @@
     "types": ["vitest/globals"],
 
     // Path aliases
-    "baseUrl": ".",
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@/*": ["./src/*"],
+    //   "@/public/*": ["./public/*"]
+    // },
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/public/*": ["./public/*"]
+      "@/libs/*": ["libs/*"],
+      "@/graphql/*": ["graphql/*"],
+      "@/components/*": ["components/*"],
+      "@/app/*": ["app/*"]
     },
 
     // Editor support
